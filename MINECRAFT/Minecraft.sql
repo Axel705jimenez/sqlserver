@@ -57,7 +57,7 @@ CREATE TABLE Arma
 	tipoArma varchar(50) not null,
 	nombre varchar(50) not null,
 	material varchar(50) not null,
-	da�o int not null,
+	daño int not null,
 	resistencia int not null,
 	estatus bit default 1 not null
 );
@@ -187,7 +187,7 @@ CREATE TABLE Ecosistema
 (
 	idEcosistema int identity(1,1),
 	tipo varchar(50) not null,
-	tama�o int not null,
+	tamaño int not null,
 	bioma varchar(50) not null,
 	clima varchar(50) not null,
 	estatus bit default 1 not null
@@ -382,7 +382,7 @@ CREATE TABLE Mob
 	habilidad varchar(50) not null,
 	tipo varchar(50) not null,
 	nombre varchar(50) not null,
-	puntosDa�o int not null,
+	puntosDaño int not null,
 	estatus bit default 1 not null
 );
 GO
@@ -489,7 +489,7 @@ CREATE TABLE Pocion
 	idPocion int identity(1,1),
 	nombre varchar(50) not null,
 	tipo varchar(50) not null,
-	puntosDa�o int not null,
+	puntosDaño int not null,
 	puntosVida int not null,
 	estatus bit default 1 not null
 );
@@ -1130,4 +1130,153 @@ GO
 INSERT INTO Chat(fuente, color, espaciadoLinea) values ('Arial Narrow', 'Azul', '1')
 GO
 
+INSERT INTO Chunk(limite, formato) values (10, 'png')
+GO
+INSERT INTO Chunk(limite, formato) values (32, 'avi')
+GO
+INSERT INTO Chunk(limite, formato) values (22, 'png')
+GO
+INSERT INTO Chunk(limite, formato) values (10, 'mp3')
+GO
+INSERT INTO Chunk(limite, formato) values (30, 'avi')
+GO
+INSERT INTO Chunk(limite, formato) values (25, 'avi')
+GO
+INSERT INTO Chunk(limite, formato) values (32, 'png')
+GO
+INSERT INTO Chunk(limite, formato) values (28, 'png')
+GO
+INSERT INTO Chunk(limite, formato) values (30, 'png')
+GO
 
+--Comercio
+INSERT INTO Comercio(tipoComercio, tipoIntercambio) values ('vendedor ambulante', 'zanahoria')
+GO
+INSERT INTO Comercio(tipoComercio, tipoIntercambio) values ('cartografo', 'esmeralda')
+GO
+INSERT INTO Comercio(tipoComercio, tipoIntercambio) values ('herrero', 'lingote de hierro')
+GO
+INSERT INTO Comercio(tipoComercio, tipoIntercambio) values ('carnicero', 'esmeralda')
+GO
+INSERT INTO Comercio(tipoComercio, tipoIntercambio) values ('granjero', 'semillas de trigo')
+GO
+INSERT INTO Comercio(tipoComercio, tipoIntercambio) values ('bibliotecario', 'cuero')
+GO
+INSERT INTO Comercio(tipoComercio, tipoIntercambio) values ('carnicero', 'esmeralda')
+GO
+INSERT INTO Comercio(tipoComercio, tipoIntercambio) values ('cartografo', 'lingote de hierro')
+GO
+INSERT INTO Comercio(tipoComercio, tipoIntercambio) values ('vendedor ambulante', 'lingote de oro')
+GO
+INSERT INTO Comercio(tipoComercio, tipoIntercambio) values ('pescador', 'esmeralda')
+GO
+
+--Comida
+INSERT INTO Comida(tipo, valorNutrimental, nombre, ingredientes) values ('carne', 3, 'filete', 'vaca')
+GO
+INSERT INTO Comida(tipo, valorNutrimental, nombre, ingredientes) values ('vegetal', 0.5, 'zanahoria', 'zanahoria')
+GO
+INSERT INTO Comida(tipo, valorNutrimental, nombre, ingredientes) values ('postre', 6, 'pastel', 'huevo, leche, azucar, trigo')
+GO
+INSERT INTO Comida(tipo, valorNutrimental, nombre, ingredientes) values ('carne', 3, 'chuleta', 'cerdo')
+GO
+INSERT INTO Comida(tipo, valorNutrimental, nombre, ingredientes) values ('fruta', 0.5, 'manzana', 'manzana')
+GO
+INSERT INTO Comida(tipo, valorNutrimental, nombre, ingredientes) values ('postre', 3, 'pastel de calabaza', 'azucar, huevo, calabaza')
+GO
+INSERT INTO Comida(tipo, valorNutrimental, nombre, ingredientes) values ('pollo', 3, 'pollo asado', 'pollo')
+GO
+INSERT INTO Comida(tipo, valorNutrimental, nombre, ingredientes) values ('carne', 3, 'carne de conejo', 'conejo')
+GO
+INSERT INTO Comida(tipo, valorNutrimental, nombre, ingredientes) values ('sopa', 2, 'sopa de champiñon', 'champiñon, plato')
+GO
+INSERT INTO Comida(tipo, valorNutrimental, nombre, ingredientes) values ('carne', 3, 'chuleta', 'vaca')
+GO
+
+--ConfigMundo
+INSERT INTO ConfigMundo(modoJuego, dificultad, preferencia, semilla, tipo) values ('creativo', 'nulo', 'mapa', 33367, 'super plano')
+GO
+INSERT INTO ConfigMundo(modoJuego, dificultad, preferencia, semilla, tipo) values ('supervivencia', 'normal', 'cofre de bonificación', 65432, 'clasico')
+GO
+INSERT INTO ConfigMundo(modoJuego, dificultad, preferencia, semilla, tipo) values ('supervivencia', 'dificil', 'cofre de bonificación', 733433, 'sky block')
+GO
+INSERT INTO ConfigMundo(modoJuego, dificultad, preferencia, semilla, tipo) values ('creativo', 'nulo', 'nulo', 034885893, 'clasico')
+GO
+INSERT INTO ConfigMundo(modoJuego, dificultad, preferencia, semilla, tipo) values ('aventura', 'normal', 'mapa', 82664, 'clasico')
+GO
+INSERT INTO ConfigMundo(modoJuego, dificultad, preferencia, semilla, tipo) values ('creativo', 'nulo', 'nulo', 123456, 'clasico')
+GO
+INSERT INTO ConfigMundo(modoJuego, dificultad, preferencia, semilla, tipo) values ('extremo', 'dificil', 'nulo', 0092321, 'clasico')
+GO
+INSERT INTO ConfigMundo(modoJuego, dificultad, preferencia, semilla, tipo) values ('aventura', 'normal', 'nulo', 99823, 'sky bolck')
+GO
+INSERT INTO ConfigMundo(modoJuego, dificultad, preferencia, semilla, tipo) values ('extremo', 'normal', 'nulo', 23093, 'clasico')
+GO
+INSERT INTO ConfigMundo(modoJuego, dificultad, preferencia, semilla, tipo) values ('creativo', 'nulo', 'nulo', 8399392, 'clasico')
+GO
+
+--ConfigUsuario
+INSERT INTO ConfigUsuario(gamertag, idioma) values ('barbiqiu', 'español')
+GO
+INSERT INTO ConfigUsuario(gamertag, idioma) values ('AxRadiel', 'inglés')
+GO
+INSERT INTO ConfigUsuario(gamertag, idioma) values ('Rinoxd', 'español')
+GO
+INSERT INTO ConfigUsuario(gamertag, idioma) values ('Aguilablanca', 'español')
+GO
+INSERT INTO ConfigUsuario(gamertag, idioma) values ('Kev0ti', 'inglés')
+GO
+INSERT INTO ConfigUsuario(gamertag, idioma) values ('taquito32', 'inglés')
+GO
+INSERT INTO ConfigUsuario(gamertag, idioma) values ('Camenio', 'inglés')
+GO
+INSERT INTO ConfigUsuario(gamertag, idioma) values ('patoasado2', 'español')
+GO
+INSERT INTO ConfigUsuario(gamertag, idioma) values ('frurro54', 'español')
+GO
+INSERT INTO ConfigUsuario(gamertag, idioma) values ('paco63', 'inglés')
+GO
+--Cordenada
+INSERT INTO Coordenada(ejeX, ejeY,ejeZ) values (0293838, 134085, 33)
+GO
+INSERT INTO Coordenada(ejeX, ejeY,ejeZ) values (5456372, 0039499200, 2284)
+GO
+INSERT INTO Coordenada(ejeX, ejeY,ejeZ) values (0293838, 134085, 19)
+GO
+INSERT INTO Coordenada(ejeX, ejeY,ejeZ) values (0293838, 134085, 0031)
+GO
+INSERT INTO Coordenada(ejeX, ejeY,ejeZ) values (0293838, 134085, -34)
+GO
+INSERT INTO Coordenada(ejeX, ejeY,ejeZ) values (-994884, 431662, 11)
+GO
+INSERT INTO Coordenada(ejeX, ejeY,ejeZ) values (0293838, 134085, -322)
+GO
+INSERT INTO Coordenada(ejeX, ejeY,ejeZ) values (-0004789239, 47823, 33)
+GO
+INSERT INTO Coordenada(ejeX, ejeY,ejeZ) values (988492911, 134085, -44736)
+GO
+INSERT INTO Coordenada(ejeX, ejeY,ejeZ) values (09953932, 498937, 0029394)
+GO
+
+
+--Cultivo
+INSERT INTO Cultivo(tiempoCultivo, tipo) values ('00:03', 'planta zanahoria')
+GO
+INSERT INTO Cultivo(tiempoCultivo, tipo) values ('00:10', 'planta bambú')
+GO
+INSERT INTO Cultivo(tiempoCultivo, tipo) values ('00:5', 'planta trigo')
+GO
+INSERT INTO Cultivo(tiempoCultivo, tipo) values ('00:03', 'planta papa')
+GO
+INSERT INTO Cultivo(tiempoCultivo, tipo) values ('00:5', 'planta rabano')
+GO
+INSERT INTO Cultivo(tiempoCultivo, tipo) values ('00:5', 'planta caña')
+GO
+INSERT INTO Cultivo(tiempoCultivo, tipo) values ('00:10', 'planta calabaza')
+GO
+INSERT INTO Cultivo(tiempoCultivo, tipo) values ('00:15', 'planta sandia')
+GO
+INSERT INTO Cultivo(tiempoCultivo, tipo) values ('00:10', 'arbol de abeto')
+GO
+INSERT INTO Cultivo(tiempoCultivo, tipo) values ('00:15', 'arbol de jungla')
+GO
